@@ -32,6 +32,7 @@ while True:
   elif user_selection == 2:
     song_title = input('What song do you want to add? ')
     playlist.add_song(song_title)
+    print('Added song!')
 
 
 
@@ -39,6 +40,7 @@ while True:
   elif user_selection == 3:
     song_title = input('What song do you want to remove? ')
     playlist.remove_song(song_title)
+    print('Removed song!')
 
 
   # Option 4: To search for song in playlist
@@ -55,7 +57,10 @@ while True:
 
   # Option 5: Return the length of the playlist
   elif user_selection == 5:
-    print(f"This set list has {playlist.length()} songs.")
+    if playlist.length() == 1:
+      print(f"This set list has 1 song.")
+    else:
+      print(f"This set list has {playlist.length()} song.")
 
   # Message for invalid input
   else:
