@@ -49,9 +49,9 @@ class Playlist:
   def length(self):
     current = self.__first_song
     count = 0
-    while current != None:
+    if current != None:
       count += 1
-      current = current.__next_song
+      current = current.get_next_song()
     return count
 
 
@@ -65,7 +65,7 @@ class Playlist:
   def print_songs(self):
     current = self.__first_song
     count = 0
-    while current != None:
+    if current != None:
       count += 1
       print(f'{count}. {current.get_title()}')
 
