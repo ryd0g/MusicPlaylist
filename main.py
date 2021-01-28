@@ -60,7 +60,7 @@ while True:
     if playlist.length() == 1:
       print(f"This set list has 1 song.")
     else:
-      print(f"This set list has {playlist.length()} song.")
+      print(f"This set list has {playlist.length()} songs.")
 
   # Message for invalid input
   else:
