@@ -25,7 +25,10 @@ while True:
 
   # Option 1: View playlist
   if user_selection == 1:
-    playlist.print_songs()
+    if playlist.length() == 0:
+      print('This playlist has no songs!')
+    else:
+      playlist.print_songs()
 
 
   # Option 2: To add a new song to playlist
