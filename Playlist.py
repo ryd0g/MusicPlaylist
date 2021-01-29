@@ -33,7 +33,7 @@ class Playlist:
     while target != None:
       if target.get_title() == title:
         if previous:
-          previous.set_next_song(get_next_song())
+          previous.set_next_song(target.get_next_song())
         else:
           self.__first_song = target.get_next_song()
         return True
